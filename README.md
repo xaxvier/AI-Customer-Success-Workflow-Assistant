@@ -248,7 +248,7 @@ Requires clarification
 
 The scenario was then considered a successful test of the improved logic.
 
-What I Learned
+### What I Learned
 
 This project helped me explore several practical concepts related to Artificial Intelligence and Customer Success.
 
@@ -337,6 +337,12 @@ Retest
 Document results
 
 The primary goal is not to create a production-ready AI system, but to demonstrate practical experimentation with AI, Customer Success workflows, structured data, and iterative evaluation.
+
+## Workflow Demonstration
+
+The following example shows the assistant analyzing a customer message and transforming it into structured Customer Success information.
+
+![AI Customer Success Workflow](screenshots/workflow-example.png)
 
 Author
 
