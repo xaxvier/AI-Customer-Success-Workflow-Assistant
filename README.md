@@ -150,7 +150,7 @@ The customer explicitly expresses interest in:
 Expansion classification is based on evidence in the customer's message rather than assumptions.
 
 ---
-Prompt Design
+### Prompt Design
 
 The core of the project is a structured prompt that instructs the Artificial Intelligence model to:
 
