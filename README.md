@@ -150,12 +150,196 @@ The customer explicitly expresses interest in:
 Expansion classification is based on evidence in the customer's message rather than assumptions.
 
 ---
-
-## Prompt Design
+Prompt Design
 
 The core of the project is a structured prompt that instructs the Artificial Intelligence model to:
 
-1. Analyze the customer's message.
-2. Classify it using predefined categories.
-3. Separ
+Analyze the customer's message.
+Classify it using predefined categories.
+Separate sentiment from customer intent.
+Determine priority using defined business-impact rules.
+Identify missing information.
+Recommend appropriate Customer Success actions.
+Generate a customer-facing response.
+Identify evidence-based expansion opportunities.
+Recommend a follow-up action.
+Avoid inventing product capabilities or customer intent.
 
+The prompt also instructs the AI to identify uncertainty instead of making unsupported assumptions.
+
+Testing and Evaluation
+
+The workflow was tested using five different customer scenarios.
+
+Test Case 1 — Workflow Automation
+
+A customer was onboarding approximately 50 employees and manually checking whether onboarding tasks were completed.
+
+Expected behavior:
+
+Identify workflow automation as the primary category.
+Recognize recurring manual work.
+Classify the issue as Medium priority.
+Identify a potential expansion opportunity.
+Ask for additional workflow and automation requirements.
+
+Result: Pass
+
+Test Case 2 — Technical Issue
+
+A notification stopped being sent to approximately 30 managers, with another employee group starting the following day.
+
+Expected behavior:
+
+Identify a notification/workflow problem.
+Recognize the time-sensitive business impact.
+Classify it as High priority.
+Recommend technical investigation.
+Avoid automatically classifying it as an expansion opportunity.
+
+Result: Pass
+
+Test Case 3 — Feature Request
+
+A customer requested a dashboard showing onboarding completion and outstanding tasks.
+
+Expected behavior:
+
+Classify it as a Feature Request.
+Identify the desired business outcome: improved visibility.
+Classify the priority as Low because there was no immediate business problem.
+Identify a Potential expansion opportunity only if supported by the customer's needs.
+
+Result: Pass after refining the classification taxonomy and separating sentiment from intent.
+
+Test Case 4 — Expansion Signal
+
+A customer already using the platform for employee onboarding expressed interest in using workflows for quarterly compliance reviews and equipment requests.
+
+Expected behavior:
+
+Identify additional use cases.
+Recognize a Strong expansion signal.
+Recommend discovery before discussing expansion.
+Avoid assuming which product capabilities are available.
+
+Result: Pass
+
+Test Case 5 — Ambiguous Request
+
+A customer simply reported:
+
+"Something isn't working correctly with our onboarding process and we need help."
+
+Expected behavior:
+
+Identify that the customer needs assistance.
+Request additional information.
+Avoid guessing the business impact.
+Avoid assigning a definitive priority without sufficient information.
+
+The initial version classified this as Medium priority.
+
+During evaluation, this was identified as an issue because the message did not provide enough information about urgency, affected users, functionality, or business impact.
+
+The priority framework was therefore updated to include:
+
+Requires clarification
+
+The scenario was then considered a successful test of the improved logic.
+
+What I Learned
+
+This project helped me explore several practical concepts related to Artificial Intelligence and Customer Success.
+
+Prompt Engineering
+
+Small changes to instructions can significantly affect the consistency of AI outputs.
+
+For example, explicitly defining allowed categories reduced inconsistent classifications.
+
+Structured Output
+
+Turning an unstructured customer message into consistent fields makes the information easier to review and potentially easier to integrate into a Customer Relationship Management (CRM) system or workflow automation platform.
+
+Human-in-the-Loop
+
+AI should not necessarily make the final Customer Success decision.
+
+The workflow keeps a human Customer Success Manager involved before customer-facing or operational actions are taken.
+
+AI Evaluation
+
+A single successful example does not demonstrate that an AI workflow is reliable.
+
+Testing multiple scenarios exposed weaknesses that were not obvious from the initial prompt.
+
+Handling Uncertainty
+
+One of the most important lessons was that the AI should sometimes say:
+
+"There is not enough information to determine this."
+
+Rather than forcing a classification, the workflow can request clarification.
+
+Current Limitations
+
+This project is a learning prototype rather than a production Customer Success system.
+
+Current limitations include:
+
+The workflow relies on the quality of the AI model's interpretation.
+Product capabilities are not automatically retrieved from verified documentation.
+There is no automated Customer Relationship Management (CRM) integration.
+There is no persistent customer history.
+Human review is still required.
+The workflow has been evaluated using a small set of manually created scenarios.
+Future Improvements
+
+Possible future iterations include:
+
+Retrieval-Augmented Generation (RAG)
+
+Connect the assistant to verified product documentation so that recommendations can be based on current product capabilities instead of relying only on the model's general knowledge.
+
+Customer Relationship Management Integration
+
+Send structured analysis into a Customer Relationship Management (CRM) system to support customer records, follow-ups, and account management.
+
+Automated Workflow
+
+Connect the analysis to a workflow automation platform so that approved actions can trigger tasks, notifications, or follow-ups.
+
+Evaluation Dataset
+
+Create a larger dataset containing dozens or hundreds of anonymized customer scenarios and evaluate classification consistency.
+
+Human Feedback
+
+Allow Customer Success Managers to correct AI classifications and use those corrections to improve future prompt design.
+
+Project Status
+
+Current status: Learning prototype
+
+The project demonstrates an iterative approach:
+
+Design
+  ↓
+Test
+  ↓
+Identify inconsistent behavior
+  ↓
+Refine instructions
+  ↓
+Retest
+  ↓
+Document results
+
+The primary goal is not to create a production-ready AI system, but to demonstrate practical experimentation with AI, Customer Success workflows, structured data, and iterative evaluation.
+
+Author
+
+Xavier
+
+This project was created as part of my exploration of Artificial Intelligence (AI), Customer Success operations, workflow automation, and practical no-code/AI solutions.
