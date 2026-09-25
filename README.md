@@ -19,6 +19,16 @@ The assistant analyzes a customer message and identifies:
 
 The project was created as a practical learning exercise to explore AI-assisted Customer Success workflows, prompt engineering, structured outputs, and AI evaluation.
 
+## Why I Built This
+
+I wanted to explore how Artificial Intelligence (AI) could support a real Customer Success workflow rather than simply generate text.
+
+The idea came from a common Customer Success challenge: customer messages often contain a mixture of technical issues, business impact, requests, missing information, and potential opportunities for broader product adoption.
+
+I built this prototype to test whether AI could provide a consistent first-pass analysis while keeping the Customer Success Manager responsible for the final decision.
+
+The project focuses on experimentation and learning rather than building a production system.
+
 ---
 
 ## Problem
