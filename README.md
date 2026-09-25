@@ -342,8 +342,8 @@ The primary goal is not to create a production-ready AI system, but to demonstra
 
 The following example shows the assistant analyzing a customer message and transforming it into structured Customer Success information.
 
-![Case 02 Part 1](screenshots/screenshot-1.png)
-![Case 02 Part 2](screenshots/screenshot-2.png)
+![Case 02 Part 1](screenshots/case02-screenshot-1.png)
+![Case 02 Part 2](screenshots/case02-screenshot-2.png)
 
 ### Author
 
